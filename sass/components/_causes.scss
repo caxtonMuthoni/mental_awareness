@@ -1,0 +1,51 @@
+.causes {
+    grid-column: center-start / center-end;
+    padding: 15rem 0;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    @media only screen and (max-width: 900px) {
+        padding: 10rem 0;
+   }
+
+    &__content {
+        display: flex;
+        align-items: center;
+        padding: 2rem 0;
+
+        @media only screen and (max-width: 1025px) {
+            flex-direction: column;
+        }
+    }
+
+    &__illustration {
+        flex: 0 0 30vw;
+        margin-right: 10rem;
+
+        @media only screen and (max-width: 1025px) {
+            flex: 1;
+            margin-bottom: 8rem;
+            margin-right: 0;
+        }
+
+        &--img {
+            width: 100%;
+            display: block;
+            border-radius: .5rem;
+            box-shadow: 0 1rem 2rem rgba($color: #000000, $alpha: .2);
+        };
+    }
+
+    &__text {
+        list-style: lower-roman;
+        flex: 1;
+    }
+
+    &__cause {
+        font-size: 2.4rem;
+        font-weight: 400;
+        margin-bottom: 3rem;
+    }
+}

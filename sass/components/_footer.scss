@@ -1,0 +1,39 @@
+.footer {
+    padding: 10rem 0;
+    grid-column: full-start / full-end;
+    background-image: url("../../resources/imgs/wave.svg");
+    background-size: cover;
+    background-repeat: repeat;
+
+    display: flex;
+    justify-content: space-evenly;
+
+    &__text {
+        font-size: 1.6rem;
+    }
+
+    &__link {
+        &:link,
+        &:visited {
+            font-size: 1.6rem;
+            text-decoration: none;
+            color: #79d9f7;
+            display: inline-block;
+            transition: all .5s;
+        }
+
+        &:active,
+        &:hover {
+            color: $color-secondary;
+            transform: skewY(10deg);
+        }
+    }
+
+    &__love1 {
+        animation: heartbeat 1s infinite;
+    }
+
+    &__love2 {
+        animation: heartbeatReverse 1s infinite;
+    }
+}

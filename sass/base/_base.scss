@@ -1,0 +1,44 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+
+    @media only screen and (max-width: 1025px) {
+         font-size: 60%;
+    }
+
+    @media only screen and (max-width: 900px) {
+         font-size: 55%;
+    }
+
+    @media only screen and (max-width: 600px) {
+         font-size: 50%;
+    }
+}
+
+body {
+    font-family: $font-family;
+    color: $color-primary;
+}
+
+.container {
+    background-color: $color-secondary;
+    display: grid;
+    grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(
+            8,
+            [col-start] minmax(min-content, 14rem) [col-end]
+        ) [center-end] minmax(6rem, 1fr) [full-end];
+    grid-template-rows: 6rem 95vh repeat(4, 100vh) max-content 40vh;
+
+    @media only screen and (max-width: 1025px) {
+        grid-template-rows: 6rem 70vh repeat(4, min-content) max-content min-content;
+    }
+}

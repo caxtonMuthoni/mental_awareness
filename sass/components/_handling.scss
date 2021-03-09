@@ -1,0 +1,54 @@
+.handling {
+    grid-column: center-start / center-end;
+    padding: 15rem 0;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    @media only screen and (max-width: 900px) {
+        padding: 10rem 0;
+   }
+
+    &__step {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @media only screen and (max-width: 900px) {
+            flex-direction: column;
+       }
+        
+        &:not(:last-of-type) {
+            margin-bottom: 8rem;
+        }
+    }
+
+    &__image {
+         flex: 0 0 30vw;
+
+         @media only screen and (max-width: 900px) {
+            flex: 1;
+            margin-bottom: 2rem;
+       }
+
+        &--img {
+            width: 80%;
+        }
+    }
+
+
+    &__content {
+        flex: 1;
+    }
+
+    &__ways {
+        list-style: lower-roman;
+        padding: 4.5rem;
+    }
+
+    &__way {
+        font-size: 1.8rem;
+        margin-bottom: 2.5rem;
+    }
+}

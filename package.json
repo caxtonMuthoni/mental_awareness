@@ -1,0 +1,23 @@
+{
+  "name": "mental-awareness",
+  "version": "1.0.0",
+  "description": "Depression or 'depressive disorder' is a mood disorder that causes distressing symptoms that affect how you feel, think and handle your daily activities.",
+  "main": "index.js",
+  "scripts": {
+    "compile:scss": "node-sass sass/main.scss resources/css/style.css -w",
+    "devServer": "live-server",
+    "start": "npm-run-all --parallel devServer compile:scss",
+    "compile:sass": "node-sass sass/main.scss resources/css/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' resources/css/style.comp.css -o resources/css/style.pref.css",
+    "compress:css": "node-sass resources/css/style.pref.css resources/css/style.css --output-style compressed",
+    "build": "npm-run-all compile:sass prefix:css compress:css"
+  },
+  "author": "Muthoni G Caxton",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.2.4",
+    "node-sass": "^5.0.0",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^8.3.1"
+  }
+}

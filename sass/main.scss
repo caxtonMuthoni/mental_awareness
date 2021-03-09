@@ -1,0 +1,15 @@
+@import './base/variables';
+@import './base/base';
+@import './base/typography';
+@import './base/utilties';
+@import './base/animations';
+
+
+@import'components/nav';
+@import'components/header';
+@import'components/types';
+@import'components/causes';
+@import'components/signs';
+@import'components/treatment';
+@import'components/handling';
+@import'components/footer';
