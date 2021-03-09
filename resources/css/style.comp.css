@@ -68,6 +68,9 @@ body {
 .mb-hg {
   margin-bottom: 8rem; }
 
+.mr-sm {
+  margin-right: 2rem; }
+
 @keyframes heartbeat {
   0% {
     transform: scale(1);
@@ -134,6 +137,9 @@ body {
     width: 100%;
     list-style: none;
     transition: all .5s; }
+    @media only screen and (max-width: 900px) {
+      .nav__list {
+        margin-left: -10rem; } }
     .nav__list-disabled {
       height: 0;
       overflow: hidden; }
@@ -375,7 +381,7 @@ body {
     margin-bottom: 2.5rem; }
 
 .footer {
-  padding: 10rem 0;
+  padding: 10rem 2rem;
   grid-column: full-start / full-end;
   background-image: url("../../resources/imgs/wave.svg");
   background-size: cover;
